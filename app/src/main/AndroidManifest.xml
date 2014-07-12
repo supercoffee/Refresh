@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.coffeestrike.refresh"
+    android:versionCode="20140709"
+    android:versionName="1.1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:name="com.coffeestrike.refresh.RefreshApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/refreshlogo5"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light"
+        tools:replace="android:theme, android:icon">
+        
+        <!--  Google play service -->
+        <meta-data android:name="com.google.android.gms.version"
+               android:value="@integer/google_play_services_version"/>
+        
+        <activity
+            android:name="com.coffeestrike.refresh.ImageListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name="com.coffeestrike.refresh.DetailActivity"
+            android:label="@string/app_name" 
+            android:parentActivityName="ImageListActivity">
+            
+             <meta-data 
+                 android:name="android.suppport_PARENT_ACTIVITY"
+                 android:value="com.coffeestrike.refresh.ImageListActivity"/>
+    
+        </activity>
+        
+        <activity 
+            android:name="com.coffeestrike.refresh.SettingsActivity" 
+            android:label="@string/app_name"
+            android:parentActivityName="com.coffeestrike.refresh.ImageListActivity">
+        </activity>
+        
+        <receiver android:name="com.coffeestrike.refresh.EventReceiver">
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        
+        <service android:name="com.coffeestrike.refresh.WallpaperChangerService"
+            android:icon="@drawable/refreshlogo5"
+            android:label="@string/app_name"
+            >
+            
+        </service>
+        
+      <!--   <activity android:name="com.coffeestrike.refresh.SearchActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            
+            <meta-data android:name="android.app.searchable"
+                   android:resource="@xml/searchable"/>
+            
+        </activity> -->
+        
+        <!-- Required for Admob -->
+         <activity android:name="com.google.android.gms.ads.AdActivity"
+             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        
+    </application>
+
+</manifest>

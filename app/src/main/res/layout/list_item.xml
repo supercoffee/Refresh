@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+		android:id="@+id/image_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="6dp"
+		android:layout_marginRight="6dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp"
+		android:orientation="horizontal" 
+		android:background="@drawable/list_item_shadow">
+
+        <ImageView
+	        android:id="@+id/image_view"
+	        android:layout_width="160dp"
+	        android:layout_height="wrap_content"
+	        android:adjustViewBounds="true"
+	        android:src="@drawable/mountains" />
+
+   		<TextView
+   		    android:id="@+id/title_text"
+   		    android:layout_width="wrap_content"
+   		    android:layout_height="wrap_content"
+   		    android:layout_gravity="center"
+   		    android:layout_marginLeft="32dp"
+   		    android:text="TextView" />
+
+    </LinearLayout>
+    
+
+ 
+</FrameLayout>

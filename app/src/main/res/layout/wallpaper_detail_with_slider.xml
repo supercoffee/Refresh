@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+	<com.sothree.slidinguppanel.SlidingUpPanelLayout 
+	    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+	    android:id="@+id/sliding_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	  	sothree:panelHeight="84dp"
+	    sothree:dragView="@+id/name"
+	    sothree:shadowHeight="4dp" 
+	    android:gravity="bottom">
+	
+	    <include layout="@layout/wallpaper_detail"/>
+	    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="#eee"
+	        android:focusable="false"
+	        android:orientation="vertical" >
+	        
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="84dp">
+		    
+		        
+		    <TextView
+		        android:id="@+id/image_title_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="4dp"
+		        android:layout_marginLeft="8dp"
+		        android:layout_marginRight="8dp"
+		        android:textSize="20sp"
+		        android:text="Title" />
+		    
+		    <TextView
+		        android:id="@+id/image_artist_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_below="@id/image_title_text"
+		        android:layout_marginTop="4dp"
+		        android:layout_marginLeft="8dp"
+		        android:layout_marginRight="8dp"
+		        android:text="Artist" />
+		</RelativeLayout>    
+
+
+	    
+	    <TextView android:id="@+id/image_info_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical|center_horizontal"
+	        android:layout_margin="16dp"
+	        android:text="Info"
+	        />
+	    
+	     <TextView
+	         android:id="@+id/image_ifl_link"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_gravity="center_vertical|center_horizontal"
+	         android:layout_margin="16dp"
+	         android:text="View on IFL" />
+	        
+	    </LinearLayout>
+
+	    
+	</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</RelativeLayout>

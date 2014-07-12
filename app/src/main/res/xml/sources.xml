@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sources>
+    
+    <source>
+        <name>Reddit -Earth</name>
+        <api>com.coffeestrike.refresh.api.RedditApi</api>
+        <!-- Options specifies the name of the subreddit -->
+        <options>EarthPorn</options>
+    </source>
+    
+    <source>
+        <name>Reddit -Space</name>
+        <api>com.coffeestrike.refresh.api.RedditApi</api>
+        <options>SpacePorn</options>
+    </source>
+    
+    <source>
+        <name>Reddit -Sky</name>
+        <api>com.coffeestrike.refresh.api.RedditApi</api>
+        <options>SkyPorn</options>
+    </source>    
+    
+    <source>
+        <name>Reddit -Desert</name>
+        <api>com.coffeestrike.refresh.api.RedditApi</api>
+        <options>DesertPorn</options>
+    </source>
+    
+    <source>
+        <name>Reddit -Winter</name>
+        <api>com.coffeestrike.refresh.api.RedditApi</api>
+        <options>WinterPorn</options>
+    </source>
+
+   	<source>
+        <name>Reddit -Beach</name>
+        <api>com.coffeestrike.refresh.api.RedditApi</api>
+        <options>BeachPorn</options>
+    </source>
+
+    
+    
+    
+</sources>

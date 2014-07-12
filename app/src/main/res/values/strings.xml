@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Refresh</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="load_more">Load more</string>
+    <string name="photo_details">Photo details</string>
+    <string name="photo_details_short">Info</string>
+    <string name="list_empty">Unable to connect to the internet.\nCheck your network connection.</string>
+    <string name="refresh">Retry</string>
+    <string name="already_downloading">Wallpaper already downloading</string>
+    <string name="download_again">Download Again?</string>
+    <string name="already_downloaded">You\'ve already downloaded this wallpaper.</string>
+    <string name="download">Download</string>
+    <string name="cancel">Cancel</string>
+    <string name="view_in_gallery">View</string>
+    <string name="cache_cleared">Cache cleared</string>
+    <string name="pref_title_clear_cache">Clear image cache</string>
+    <string name="pref_key_clear_cache">clearcache</string>
+    <string name="pref_title_devopts">Developer options</string>
+    <string name="search_hint">Search wallpapers</string>
+    <string name="action_share">Share</string>
+    <string name="action_set">Set wallpaper</string>
+    <string name="no_more_downloads">You\'ve reached the daily download limit.</string>
+
+</resources>
