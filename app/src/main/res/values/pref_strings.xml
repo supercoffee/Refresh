@@ -3,5 +3,8 @@
     <string name="pref_key_auto_change">pref_key_auto_change</string>
     <string name="pref_title_auto_change">Automatically change wallpaper</string>
     <string name="pref_desc_auto_change">Change the wallpaper every time the screen is turned on</string>
+
+    <string name="pref_key_shuffle">pref_key_shuffle</string>
+    <string name="pref_title_shuffle">Random</string>
     
 </resources>

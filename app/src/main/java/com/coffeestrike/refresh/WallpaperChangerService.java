@@ -38,7 +38,11 @@ public class WallpaperChangerService extends Service {
 
 
 	private SharedPreferences mSharedPrefs;
-	private String mAutoChangeKey;	@Override
+	private String mAutoChangeKey;
+    //which image is next
+    private int mNext;
+
+    @Override
 	public void onDestroy() {
 		unregisterReceiver(mBroadCastReceiver);
 		super.onDestroy();
@@ -55,15 +59,23 @@ public class WallpaperChangerService extends Service {
 				
 				//get a listing of all the files in the dir
 				File[] files = dir.listFiles();
+
+                File nextFile = null;
+                if(mSharedPrefs.getBoolean("pref_key_shuffle", true)){
+                    //pick a random file from the list
+                    int rand = new Random().nextInt(files.length);
+                    nextFile = files[rand];
+                }else{
+                    mNext %= files.length;
+                    nextFile = files[mNext++];
+                }
 				
-				//pick a random file from the list
-				int rand = new Random().nextInt(files.length);
-				File randomFile = files[rand];
+
 				
 				DisplayMetrics dm = getResources().getDisplayMetrics();
 				
 				//decode the file
-				Bitmap image = BitmapFactory.decodeFile(randomFile.getPath());
+				Bitmap image = BitmapFactory.decodeFile(nextFile.getPath());
 				
 				int imgWidth = image.getWidth();
 				

@@ -6,7 +6,12 @@
         android:title="@string/pref_title_auto_change"
         android:summary="@string/pref_desc_auto_change"
         android:defaultValue="true"/>
-   
+
+    <CheckBoxPreference
+        android:dependency="@string/pref_key_auto_change"
+        android:key="@string/pref_key_shuffle"
+        android:title="@string/pref_title_shuffle"
+        android:defaultValue="true"/>
     
     
 </PreferenceScreen>
